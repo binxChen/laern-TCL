@@ -4,20 +4,22 @@
 
 /* Import lib-rem.less if supportREM opened. */
 //@import "lib-rem";
-body{
+body {
 
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color:#000;
+  color: #000;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #f6f7f9 0%, #dadfe3 100%);
 }
-.clearfix{
+
+.clearfix {
   zoom: 1;
   clear: both;
 }
-#tcl-main{
+
+#tcl-main {
   background: linear-gradient(to bottom, #f6f7f9 0%, #dadfe3 100%);
   width: 100%;
   max-width: 1197px;
@@ -26,23 +28,23 @@ body{
   text-align: center;
   font-size: 16px;
   position: relative;
-  .header{
+  .header {
     position: fixed;
     height: 67px;
     width: 100%;
     box-sizing: border-box;
     max-width: 1197px;
     text-align: left;
-    img{
+    img {
       width: auto;
       height: 100%;
     }
-    .h-title{
+    .h-title {
       float: right;
       text-align: center;
       height: 44px;
       font-size: 0;
-      .h-title-c{
+      .h-title-c {
         height: 44px;
         line-height: 50px;
         color: #fff;
@@ -54,33 +56,52 @@ body{
       }
     }
   }
+  .footer {
+    display: block;
+    position: fixed;
+    height: 262px;
+    width: 100%;
+    .f1 {
+      .lt{
+        width: 290px;
+        height: 172px;
+        top: 43px;
+        left: 35px;
+        position: absolute;
+      }
+    }
+  }
   .swiper-container {
     width: 100%;
     height: 100%;
   }
 
-  .main-container{
+  .main-container {
     position: relative;
 
-
-    .footer-arrow{
+    .footer-arrow {
       display: block;
       position: absolute;
       background: url("../img/arrow_down.png") no-repeat top center;
       background-size: 100%;
-      bottom: 10px;
       left: 50%;
       transform: translate(-50%);
       width: 32px;
       height: 17px;
     }
-
-    .page{
+    .up{
+      transform: rotate(180deg);
+      top: 10px;
+    }
+    .down{
+      bottom: 20px;
+    }
+    .page {
       top: 50%;
       width: 100%;
       height: 800px;
       transform: translateY(-50%);
-      .btn{
+      .btn {
         width: 121px;
         height: 35px;
         background-color: #e60012;
@@ -88,7 +109,7 @@ body{
         font-size: 16px;
         text-align: center;
         line-height: 35px;
-        span{
+        span {
           height: 35px;
           display: inline-block;
           padding: 0px 12px;
@@ -96,25 +117,25 @@ body{
           background-size: auto 50%;
         }
       }
-      .tag{
+      .tag {
         position: absolute;
         width: 442px;
         height: auto;
         top: 50%;
         z-index: 1;
         color: #333;
-        .t1{
+        .t1 {
           font-size: 24px;
           margin: 10px 0;
         }
-        .t2{
+        .t2 {
           font-size: 20px;
           margin: 10px 0;
           color: #8b8d8f;
         }
-        .t3{
+        .t3 {
           margin: 30px 0;
-          .t3_title{
+          .t3_title {
             color: #8b8d8f;
             display: inline-block;
             font-size: 20px;
@@ -122,26 +143,26 @@ body{
             background: url("../img/1.png") no-repeat bottom left;
           }
         }
-        .btn{
+        .btn {
           float: right;
         }
       }
     }
-    .center{
+    .center {
       position: absolute;
       left: 50%;
       transform: translate(-50%);
       background-repeat: no-repeat;
       background-size: 100%;
     }
-    .pa{
+    .pa {
       position: absolute;
       background-repeat: no-repeat;
       background-size: 100%;
     }
-    .p1{
+    .p1 {
       position: relative;
-      .bg1-1{
+      .bg1-1 {
         .center;
         background-image: url('../img/page1_bg03.png');
         width: 536px;
@@ -149,7 +170,7 @@ body{
         z-index: 1;
         top: 30px;
       }
-      .bg1-2{
+      .bg1-2 {
         .center;
         background-image: url('../img/page1_bg04.png');
         width: 536px;
@@ -157,7 +178,7 @@ body{
         z-index: 2;
         top: 30px;
       }
-      .bg2-1{
+      .bg2-1 {
         .center;
         background-image: url('../img/page1_bg01.png');
         width: 1197px;
@@ -165,7 +186,7 @@ body{
         z-index: 1;
         top: 250px;
       }
-      .bg2-2{
+      .bg2-2 {
         .center;
         background-image: url('../img/page1_bg02.png');
         width: 1197px;
@@ -173,7 +194,7 @@ body{
         z-index: 2;
         top: 250px;
       }
-      .t1{
+      .t1 {
         .center;
         z-index: 3;
         background-image: url('../img/page1_title.png');
@@ -181,7 +202,7 @@ body{
         height: 176px;
         top: 130px;
       }
-      .t2{
+      .t2 {
         .center;
         z-index: 3;
         background-image: url('../img/page1_title_sub.png');
@@ -189,7 +210,7 @@ body{
         height: 126px;
         top: 284px;
       }
-      .bg3{
+      .bg3 {
         .center;
         z-index: 4;
         background-image: url('../img/page1_product.png');
@@ -198,9 +219,9 @@ body{
         bottom: 10px;
       }
     }
-    .p2{
+    .p2 {
       position: relative;
-      .bg1-1{
+      .bg1-1 {
         .pa;
         background-image: url('../img/page2_bg01.png');
         top: 50%;
@@ -210,7 +231,7 @@ body{
         right: 35px;
         z-index: 3;
       }
-      .bg1-2{
+      .bg1-2 {
         .pa;
         background-image: url('../img/page2_bg02.png');
         top: 50%;
@@ -220,7 +241,7 @@ body{
         right: 35px;
         z-index: 3;
       }
-      .bg2{
+      .bg2 {
         .pa;
         background-image: url('../img/page2_product.png');
         width: 516px;
@@ -229,16 +250,16 @@ body{
         left: 360px;
         z-index: 2;
       }
-      .tag{
+      .tag {
         text-align: right;
-        .btn{
+        .btn {
           float: right;
         }
       }
     }
-    .p3{
+    .p3 {
       position: relative;
-      .bg1-1{
+      .bg1-1 {
         .pa;
         background-image: url('../img/page3_bg01.png');
         top: 50%;
@@ -248,7 +269,7 @@ body{
         left: 15px;
         z-index: 3;
       }
-      .bg1-2{
+      .bg1-2 {
         .pa;
         background-image: url('../img/page3_bg02.png');
         top: 50%;
@@ -258,7 +279,7 @@ body{
         left: 15px;
         z-index: 3;
       }
-      .bg2{
+      .bg2 {
         .pa;
         background-image: url('../img/page3_p01.png');
         width: 274px;
@@ -267,7 +288,7 @@ body{
         left: 470px;
         z-index: 2;
       }
-      .bg3{
+      .bg3 {
         .pa;
         background-image: url('../img/page3_p02.png');
         width: 358px;
@@ -276,17 +297,17 @@ body{
         left: 590px;
         z-index: 1;
       }
-      .tag{
+      .tag {
         text-align: left;
         right: -130px;
-        .btn{
+        .btn {
           float: left;
         }
       }
     }
-    .p4{
+    .p4 {
       position: relative;
-      .bg1-1{
+      .bg1-1 {
         .pa;
         background-image: url('../img/page4_bg01.png');
         top: 40px;
@@ -295,7 +316,7 @@ body{
         right: 65px;
         z-index: 3;
       }
-      .bg1-2{
+      .bg1-2 {
         .pa;
         background-image: url('../img/page4_bg02.png');
         top: 40px;
@@ -304,7 +325,7 @@ body{
         right: 65px;
         z-index: 3;
       }
-      .bg2{
+      .bg2 {
         .pa;
         background-image: url('../img/page4_p01.png');
         width: 250px;
@@ -313,16 +334,16 @@ body{
         left: 360px;
         z-index: 2;
       }
-      .tag{
+      .tag {
         text-align: right;
-        .btn{
+        .btn {
           float: right;
         }
       }
     }
-    .p5{
+    .p5 {
       position: relative;
-      .bg1-1{
+      .bg1-1 {
         .pa;
         background-image: url('../img/page5_bg01.png');
         top: 50%;
@@ -332,7 +353,7 @@ body{
         left: 15px;
         z-index: 3;
       }
-      .bg1-2{
+      .bg1-2 {
         .pa;
         background-image: url('../img/page5_bg02.png');
         top: 50%;
@@ -342,7 +363,7 @@ body{
         left: 15px;
         z-index: 3;
       }
-      .bg2{
+      .bg2 {
         .pa;
         background-image: url('../img/page5_p01.png');
         width: 362px;
@@ -351,10 +372,10 @@ body{
         left: 440px;
         z-index: 2;
       }
-      .tag{
+      .tag {
         text-align: left;
         right: -130px;
-        .btn{
+        .btn {
           float: left;
         }
       }
